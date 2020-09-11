@@ -1,0 +1,19 @@
+.pn-sidebar-menu{
+    display:flex;
+    flex-direction:column;
+    background-image: linear-gradient(rgb(51,0,204),#7D5CDE);
+    border-radius: 2em;
+    justify-content: center;
+    color: white;
+    height:100%;
+    width:20em;
+}
+
+.pn-profile-label , .pn-posts-label , .pn-posts-gallery, .pn-posts-toDo{
+    margin-left: 2em;
+    border-bottom: 1px solid white;
+    margin-bottom: 0.5em;
+    font-size: 1.5em;
+    padding: 0.7em;
+}
+

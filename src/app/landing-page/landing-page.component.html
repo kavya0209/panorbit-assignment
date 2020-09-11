@@ -1,0 +1,13 @@
+<div class="pn-container-inner">
+    <div class="pn-names-container ">
+       <div class="pn-select-account pn-justify-content">Select an account</div>
+       <div class="pn-list" >
+           <div class="pn-name-container" *ngFor="let profile of profileDataLocal.users" (click)="goProfile(profile.id)">
+               <div class="pn-icon-container"><img class="pn-small-profile" src="{{profile.profilepicture}}"></div>
+               <div class="pn-name ">{{profile.name}}</div>
+           </div>
+       </div>
+    </div>
+</div>
+
+

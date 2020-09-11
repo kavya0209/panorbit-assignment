@@ -3,8 +3,19 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: true,
+  firebaseConfig: {
+    apiKey: "AIzaSyDntPSMPg8rDIEPRTr8bKgADJDePYS-2ZE",
+    authDomain: "panorbit-assignment.firebaseapp.com",
+    databaseURL: "https://panorbit-assignment.firebaseio.com",
+    projectId: "panorbit-assignment",
+    storageBucket: "panorbit-assignment.appspot.com",
+    messagingSenderId: "197822030155",
+    appId: "1:197822030155:web:0abfff21a8c5482ad448ce"
+  },
+  
 };
+
 
 /*
  * For easier debugging in development mode, you can import the following file

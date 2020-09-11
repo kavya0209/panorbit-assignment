@@ -1,0 +1,113 @@
+<div class="pn-main-body">
+    <app-sidebar></app-sidebar>
+    <div class="pn-profile-main ">
+       <div class="pn-header ">
+           <div class="pn-header-label">Profile</div>
+           <div class="pn-header-name"  (click) = toggleDisplay()>
+              <img class="pn-img-header" src="{{profileDataLocal.profilepicture}}">
+               <p class="profile-header-name">{{profileDataLocal.name}}</p>
+           </div>
+       </div>
+       <div class="pn-body ">
+             <div class="pn-profile-info " >
+                 <div class="pn-div1 ">
+                    <img class="pn-profile-body-img" src="{{profileDataLocal.profilepicture}}">
+                 </div>
+                 <div class="pn-div2 ">
+                     <div class="pn-username-container pn-align text-color label-padding ">
+                        {{profileDataLocal.name}}
+                    </div>
+                     <div class="pn-username-container  label-padding">
+                         <div class="pn-flex pn-flex-label text-color-placeholder ">Username :</div>
+                         <div class="pn-flex text-color">{{profileDataLocal.username}}</div>
+                     </div>
+                     <div class="pn-username-container  label-padding">
+                        <div class="pn-flex pn-flex-label text-color-placeholder">e-mail :</div>
+                        <div class="pn-flex text-color">{{profileDataLocal.email}}</div>
+                     </div>
+                     <div class="pn-username-container  label-padding">
+                        <div class="pn-flex pn-flex-label text-color-placeholder">phone :</div>
+                        <div class="pn-flex text-color">{{profileDataLocal.phone}}</div>
+                     </div>
+                     <div class="pn-username-container  padding-website">
+                        <div class="pn-flex pn-flex-label text-color-placeholder">Website :</div>
+                        <div class="pn-flex text-color">{{profileDataLocal.website}}</div>
+                     </div>
+                 </div>
+                 <div class="pn-div3 padding-website">
+                    <div class="pn-username-container pn-align text-color-placeholder  label-padding">
+                        Company
+                    </div>
+                    <div class="pn-username-container  label-padding">
+                        <div class="pn-flex pn-flex-label text-color-placeholder">Name :</div>
+                        <div class="pn-flex text-color">{{profileDataLocalCompany.name}}</div>
+                    </div>
+                    <div class="pn-username-container  label-padding">
+                        <div class="pn-flex pn-flex-label text-color-placeholder">catchphrase :</div>
+                        <div class="pn-flex text-color">{{profileDataLocalCompany.catchPhrase}}</div>
+                    </div>
+                    <div class="pn-username-container  label-padding">
+                        <div class="pn-flex pn-flex-label text-color-placeholder">bs :</div>
+                        <div class="pn-flex text-color">{{profileDataLocalCompany.bs}}</div>
+                    </div>
+                 </div>
+             </div>
+             <div class="pn-profile-address ">
+                 <div class="text-color-placeholder pn-address">Address</div>
+                   <div class="pn-div4 ">
+                     <div class="pn-username-container  label-padding">
+                       <div class="pn-flex pn-flex-label text-color-placeholder ">Street :</div>
+                        <div class="pn-flex text-color">{{profileDataLocalAddress.street}}</div>
+                        <div class="pn-flex1"></div>
+                      </div>
+                      <div class="pn-username-container  label-padding">
+                       <div class="pn-flex pn-flex-label text-color-placeholder">Suite :</div>
+                       <div class="pn-flex text-color">{{profileDataLocalAddress.suite}}</div>
+                       <div class="pn-flex1"></div>
+                      </div>
+                      <div class="pn-username-container  label-padding">
+                        <div class="pn-flex pn-flex-label text-color-placeholder">City :</div>
+                        <div class="pn-flex text-color">{{profileDataLocalAddress.city}}</div>
+                        <div class="pn-flex1"></div>
+                      </div>
+                     <div class="pn-username-container  label-padding">
+                       <div class="pn-flex pn-flex-label text-color-placeholder">Zipcode :</div>
+                       <div class="pn-flex text-color">{{profileDataLocalAddress.zipcode}}</div>
+                       <div class="pn-flex1"></div>
+                    </div>
+                    <div class="pn-gps-container label-paddingr">
+                      <img class="pn-gps-image" src="/assets/gps.jpeg">
+                     </div>
+                     <div class="pn-username-container  label-padding pn-lat">
+                        <div class="pn-ln-label text-color-placeholder">Lat :</div>
+                        <div class="text-color pn-ln">{{profileDataLocalGeo.lat}}</div>
+                        <div class="pn-flex-label text-color-placeholder pn-ln-label">Lng :</div>
+                        <div class="text-color pn-ln">{{profileDataLocalGeo.lng}}</div>
+                     </div>
+                </div>
+             </div>
+       </div>
+    </div>
+</div>
+
+<div class="pn-top-right" *ngIf ="isShow">
+    <div class="pm-align-center pm-margin-top"><img class="img-signout" src="{{profileDataLocal.profilepicture}}"></div>
+    <div class="pm-align-center pm-padding">{{profileDataLocal.name}}</div>
+    <div class="pm-align-center pm-padding pm-bottom-border">{{profileDataLocal.email}}</div>
+    <div class="pm-align-center pm-padding pm-bottom-border">
+        <div class=""><img class="img1-signout" src="/assets/extra-profile.jpeg"></div>
+        <div class="name1-inner-label">Clemetine Bauch</div>
+    </div>
+    <div class="pm-align-center pm-padding">
+        <div class=""><img class="img1-signout" src="/assets/extra-profile.jpeg"></div>
+        <div class="name1-inner-label">Patricia Lebsack</div>
+    </div>
+    <div class="pm-align-center pm-padding pm-margin-bottom">
+        <button class="button" (click)="signOut()">Sign Out</button>
+    </div>
+</div>
+
+
+
+
+
